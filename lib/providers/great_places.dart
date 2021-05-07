@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'dart:io';
 
 import 'package:flutter/foundation.dart';
+import '../helpers/db_helper.dart';
 import '../models/place.dart';
 
 class GreatPlaces with ChangeNotifier {
@@ -19,5 +20,10 @@ class GreatPlaces with ChangeNotifier {
         location: null);
     _items.add(newPlace);
     notifyListeners();
+    DBHelper.insert('places', {
+      'id': newPlace.id,
+      'title': newPlace.title,
+      'image': pickedImage.path
+    });
   }
 }
