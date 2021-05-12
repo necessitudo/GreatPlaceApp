@@ -4,6 +4,8 @@
         android:label="great_place_app"
         android:icon="@mipmap/ic_launcher"
         android:requestLegacyExternalStorage="true">
+        <meta-data android:name="com.google.android.geo.API_KEY"
+               android:value="AIzaSyB5_fnahv4gGGiiVUjytWcKcTZc8Z4WVkg"/>
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"
